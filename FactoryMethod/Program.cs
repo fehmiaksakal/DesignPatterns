@@ -13,7 +13,7 @@ namespace FactoryMethod
             // or u can use  CustomerManager manager = new CustomerManager(new ProcessFactory());
             CustomerManager manager = new CustomerManager(new BadProcessFactory());
             manager.Save();
-            Console.ReadLine();
+            Console.ReadLine();//Amaç yazılımda değişimi kontrol altında tutmaktır. Kullanılan sistemlerde değişiklik gösterebilecek(yani hemen hemen hepsi cache, orm... ) olanlarının implementasyonunu belirlenen yapıyla ve en az iş ile gerçekeleştirmemize olanak sağlar.
         }
     }
     public class ProcessFactory : IProcessFactory
